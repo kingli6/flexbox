@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  border: 1px solid green; /*for debugging DOne by me*/
+  background-color: #5995da; /*Blue*/
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-between; /*leaves gap in between | "justify-content: space-between;" leaves ONLy space between the elements and not on the edges/sides on the first and the last element*/
+}
+
+.links {
+  /* border: 1px solid #fff; For debugging */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995da;
+  background-color: #d6e9fe;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid green; */
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*align-item makes makes adjusting in the verticle axis*/
+  /* border: 2px dotted black; */
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center; /*justify-content makes adjusting in the horizontal axis*/
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center; /*align-item makes makes adjusting in the verticle axis*/
+
+  /* flex-wrap: wrap; /*Adding the following flex-wrap property forces items that don’t fit to get bumped down to the next row 
+  https://www.internetingishard.com/html-and-css/flexbox/ 
+  flex-direction: column; */
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.first-item {
+  /*Adding an order property to a flex item defines its order in the container without affecting surrounding items. Its default value is 0, and increasing or decreasing it from there moves the item to the right or left, respectively.
+  https://www.internetingishard.com/html-and-css/flexbox/*/
+  order: 2;
+}
+
+.second-item {
+  order: 1;
+}
+.last-item {
+  order: -1;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #d6e9fe;
+  height: 200px;
+  flex: 1;
+  /*That flex: 1; line tells the items to stretch to match the width of .footer. Since they all have the same weight, they’ll stretch equally:*/
+}
+
+/* .footer-two {
+  flex: 2;
+} */
+.footer-one,
+.footer-three {
+  background-color: #5995da;
+  flex: initial;
+  width: 300px;
+}
